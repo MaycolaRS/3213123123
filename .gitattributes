@@ -1,0 +1,2 @@
+IMG/* filter=lfs diff=lfs merge=lfs -text
+Vid/* filter=lfs diff=lfs merge=lfs -text
