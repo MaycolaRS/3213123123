@@ -13,6 +13,31 @@
       padding: 0;
     }
 
+    .navbar {
+      background-color: #FF0000;
+      padding: 10px;
+      display: flex;
+      align-items: center; /* Alinha verticalmente os itens */
+      position: fixed; /* Torna a navbar fixa */
+      top: 0; /* Cola no topo da tela */
+      left: 0;
+      width: 100%; /* Ocupa toda a largura da tela */
+      z-index: 1000; /* Garante que fique acima dos outros elementos */
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #cc0000; /* Vermelho mais escuro ao passar o mouse */
+    }
+
     .container {
       display: flex;
       align-items: center;
@@ -42,24 +67,59 @@
       max-width: 400px;
       height: auto;
     }
+    .video-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px; /* Espaço entre os vídeos */
+      margin: 20px 0; /* Margem superior e inferior */
+    }
+
+    .video-container iframe {
+      width: 300px; /* Largura do vídeo */
+      height: 200px; /* Altura do vídeo */
+    }
+    .video-title {
+      text-align: center;
+      color: #FFD700;
+      font-size: 32px;
+      margin: 20px 0; /* Margem superior e inferior */
+    }
+    .navbar-links {
+      margin-left: auto; /* Empurra os links para a direita */
+      display: flex; /* Exibe os links em linha */
+      gap: 20px; /* Espaço entre os links */
+    }
 
   </style>
 </head>
 <body>
 
+
+<!-- Barra de navegação -->
+<div class="navbar">
+  <img src="LOGO/jjk_high_logo-removebg-preview.png" height="60px">
+  <a href="#home">Home</a>
+  <a href="#iformaçao">Informações</a>
+  <a href="#curiosidade">Curiosidade</a>
+  <a href="#personagem">Personagem</a>
+  <a href="#videos">Vídeos</a>
+</div>
+
+
+
 <!-- Seção Mahoraga em tela cheia -->
+<section id="home">
 <div style="position: relative; width: 100vw; height: 98vh; overflow: hidden;">
   <video src="Vid/OP1.webm" autoplay muted loop 
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
   </video>
   <h1 style="position: absolute; top: 20px; left: 110px; color: #FFD700; font-size: 32px; font-family: Arial, sans-serif; text-shadow: 2px 2px 5px #000;">
-    GENERAL IMORAL DA ESPADA DE OITO CABOS MAHORAGA
   </h1>
 </div>
+</section>
 
 
-
-
+<section id="iformaçao">
   <!-- Seção 1 -->
   <div class="container">
     <div class="texto">
@@ -72,8 +132,11 @@
       <img src="IMG/Yuji/Yuji_Itadori_(Volume_1).webp" alt="Yuji Itadori">
     </div>
   </div>
+</section>
+  
 
-  <!-- Seção 2 -->
+<section id="curiosidade">
+<!-- Seção 2 -->
   <div class="container">
     <div class="texto">
       <h1>RYOMEN SUKUNA É BASEADO EM UM PERSONAGEM REAL</h1>
@@ -85,7 +148,9 @@
       <img src="IMG/Yuji/sukuna vs itadori.jpg" alt="Sukuna vs Itadori">
     </div>
   </div>
+</section>
 
+<section id="personagem">
     <!-- Seção 3 -->
   <div class="container">
     <div class="texto">
@@ -97,6 +162,7 @@
       <img src="IMG/Yuji/Yuji_Itadori_(SJ_2020-43).webp" alt="Sukuna vs Itadori">
     </div>
   </div>
+</section>
 
   <!-- Seção Mahoraga em tela cheia -->
 <div style="position: relative; width: 100vw; height: 70vh; overflow: hidden;">
@@ -104,7 +170,6 @@
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
   </video>
   <h1 style="position: absolute; top: 20px; left: 110px; color: #FFD700; font-size: 32px; font-family: Arial, sans-serif; text-shadow: 2px 2px 5px #000;">
-    GENERAL IMORAL DA ESPADA DE OITO CABOS MAHORAGA
   </h1>
 </div>
 
@@ -199,6 +264,18 @@
       </div>
     <div class="imagem">
       <img src="IMG/Megumi/Habilidades/JUJUTSU KAISEN - manga panel.jpg"alt="Yuji Itadori">
+    </div>
+  </div>
+
+  <!-- Seção 10 -->
+  <div class="container">
+    <div class="texto">
+      <h1>BANSHO</h1>
+      <p>
+        Usando a Técnica das Dez Sombras, o usuário coloca uma mão sobre a outra e ajusta os dedos para criar uma sombra de uma cabeça de elefante. Max Elefante é então invocado da sombra do usuário, mas isso leva algum tempo, além de uma grande quantidade de energia amaldiçoada.    
+      </div>
+    <div class="imagem">
+      <img src="IMG/Megumi/Habilidades/Max Elephant.jpg"alt="Yuji Itadori">
     </div>
   </div>
 
@@ -328,11 +405,11 @@
 
 <!-- Seção Mahoraga em tela cheia -->
 <div style="position: relative; width: 100vw; height: 70vh; overflow: hidden;">
-  <video src="IMG/Kugisaki/VID/Nobara.mp4" autoplay muted loop 
+  <video src="Vid/Nobara.mp4" autoplay muted loop 
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
   </video>
   <h1 style="position: absolute; top: 20px; left: 110px; color: #FFD700; font-size: 32px; font-family: Arial, sans-serif; text-shadow: 2px 2px 5px #000;">
-    GENERAL IMORAL DA ESPADA DE OITO CABOS MAHORAGA
+
   </h1>
 </div>
 
@@ -371,17 +448,6 @@
     </div>
   </div>
 
-<!-- Seção Mahoraga em tela cheia -->
-<div style="position: relative; width: 100vw; height: 70vh; overflow: hidden;">
-  <video src="IMG/Saturo/Azul.webm" autoplay muted loop 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-  </video>
-  <h1 style="position: absolute; top: 20px; left: 110px; color: #FFD700; font-size: 32px; font-family: Arial, sans-serif; text-shadow: 2px 2px 5px #000;">
-    GENERAL IMORAL DA ESPADA DE OITO CABOS MAHORAGA
-  </h1>
-</div>
-
-
   <!-- Seção 14 -->
   <div class="container">
     <div class="texto">
@@ -410,7 +476,7 @@
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
   </video>
   <h1 style="position: absolute; top: 20px; left: 110px; color: #FFD700; font-size: 32px; font-family: Arial, sans-serif; text-shadow: 2px 2px 5px #000;">
-    GENERAL IMORAL DA ESPADA DE OITO CABOS MAHORAGA
+ 
   </h1>
 </div>
 
@@ -429,16 +495,16 @@
 
 <!-- Seção Mahoraga em tela cheia -->
 <div style="position: relative; width: 100vw; height: 70vh; overflow: hidden;">
-  <video src="IMG/Kugisaki/VID/Nobara.mp4" autoplay muted loop 
+  <video src="Vid/Expd - Gojo.mp4" autoplay muted loop 
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
   </video>
   <h1 style="position: absolute; top: 20px; left: 110px; color: #FFD700; font-size: 32px; font-family: Arial, sans-serif; text-shadow: 2px 2px 5px #000;">
-    GENERAL IMORAL DA ESPADA DE OITO CABOS MAHORAGA
+
   </h1>
 </div>
 
 
-  <!-- Seção 14 -->
+<!-- Seção 14 -->
   <div class="container">
     <div class="texto">
       <h1>MURYŌKŪSHO</h1>
@@ -456,19 +522,7 @@
       <p>
         Nobara é uma jovem confiante e impetuosa com um caráter inabalável. Mais do que tudo, Nobara é determinada a permanecer fiel a si mesma, custe o que custar.Ela se orgulha por ser uma garota bonita e também uma lutadora forte, recusando-se a deixar alguém influenciá-la. </div>
     <div class="imagem">
-      <img src="IMG/Saturo/pumple.png">
-    </div>
-  </div>
-
-
-  <!-- Seção 14 -->
-  <div class="container">
-    <div class="texto">
-      <h1>MIZUSHI</h1>
-      <p>
-        A técnica amaldiçoada de Sukuna permite que ele lance golpes em vários alcances para cortar objetos e espaço, bem como liberar chamas destrutivas. </div>
-    <div class="imagem">
-      <img src="IMG/Saturo/pumple.png">
+      <img src="IMG/Sukuna/HOME.png">
     </div>
   </div>
 
@@ -479,7 +533,7 @@
       <p>
         O ataque de corte à distância padrão de Sukuna que pode ser usado contra espíritos amaldiçoados e feiticeiros com grande eficácia. Usando a segunda adaptação de Mahoraga para Limitless como modelo, Sukuna aprendeu a aprimorar o Dismantle estendendo sua área alvo para o próprio mundo, transformando-os em "cortes que cortam o mundo"  </div>
     <div class="imagem">
-      <img src="IMG/Saturo/pumple.png">
+      <img src="IMG/Sukuna/Habilidades/desmantelar.png">
     </div>
   </div>
 
@@ -491,7 +545,7 @@
       <p>
         Um ataque cortante que se ajusta dependendo da resistência do alvo e do nível de energia amaldiçoada para cortá-lo de uma só vez.A menos que seja usado em sua expansão de domínio, Sukuna deve fazer contato físico com o alvo para ativar Cleave.  </div>
     <div class="imagem">
-      <img src="IMG/Saturo/pumple.png">
+      <img src="IMG/Sukuna/Habilidades/cleva.png">
     </div>
   </div>
 
@@ -502,7 +556,7 @@
       <p>
         Sukuna pode utilizar a técnica Cleave na forma de uma teia de aranha ao tocar o chão. Como uma variação de Cleave, Teia de Aranha se adapta à dureza do ambiente, desmoronando o chão de uma só vez.  </div>
     <div class="imagem">
-      <img src="IMG/Saturo/pumple.png">
+      <img src="IMG/Sukuna/Habilidades/Teia de aranha.jpg">
     </div>
   </div>
 
@@ -513,7 +567,7 @@
       <p>
         Sukuna pode criar e manipular fogo para ataques de longo alcance entoando "Fūgae" formando uma flecha. Essa técnica só pode ser usada depois que ele executa Desmantelar e Clivar.[90] O poder de fogo dessas chamas excede o de Jogo, uma maldição de grau especial não registrada cuja característica marcante envolve poderes pirocinéticos extremamente destrutivos.  </div>
     <div class="imagem">
-      <img src="IMG/Saturo/pumple.png">
+      <img src="IMG/Sukuna/Habilidades/kamno.png">
     </div>
   </div>
 
@@ -524,7 +578,7 @@
       <p>
         Após encarnar através do corpo de Megumi, Sukuna teve acesso à cobiçada técnica herdada do Clã Zenin, permitindo-lhe invocar dez shikigami diferentes usando suas sombras como intermediário.Também lhe concede manipulação geral das sombras, permitindo-lhe esconder-se nas sombras ou armazenar objetos dentro de sua própria sombra.  </div>
     <div class="imagem">
-      <img src="IMG/Saturo/pumple.png">
+      <img src="IMG/Sukuna/Habilidades/caes divinos.png">
     </div>
   </div>
 
@@ -535,7 +589,7 @@
       <p>
         Shikigami caninos gêmeos com narizes poderosos para rastreamento e presas e garras letais para devorar maldições. Ao manter intencionalmente a forma do shikigami instável, Sukuna pode aumentar seu alcance efetivo e evitar que seja completamente destruído. Embora isso impeça o shikigami de agir de forma independente e reduza seu poder de ataque, Sukuna pode compensar o último com sua imensa capacidade e produção de energia amaldiçoada.  </div>
     <div class="imagem">
-      <img src="IMG/Saturo/pumple.png">
+      <img src="IMG/Sukuna/Habilidades/caes 2.png">
     </div>
   </div>
 
@@ -546,7 +600,7 @@
       <p>
         Uma versão aprimorada do Cão Divino que combina os dois shikigami em um único shikigami mais forte. O Cão Divino de Sukuna: Totalidade é maior e mais musculoso, e possui longos caninos inferiores. Sua força é visivelmente maior, sendo capaz de destruir o chão com um único soco.  </div>
     <div class="imagem">
-      <img src="IMG/Saturo/pumple.png">
+      <img src="IMG/Sukuna/Habilidades/cao da totalidade.png">
     </div>
   </div>
 
@@ -557,7 +611,7 @@
       <p>
         Um shikigami semelhante a uma coruja que pode voar e emitir eletricidade de suas asas. O Nue de Sukuna é várias vezes maior em tamanho, possui dois braços adicionais e uma cauda longa que se assemelha à de uma cobra, e possui a marca da Grande Serpente na cabeça. A eletricidade que ele descarrega é muito mais forte, semelhante a raios.  </div>
     <div class="imagem">
-      <img src="IMG/Saturo/pumple.png">
+      <img src="IMG/Sukuna/Habilidades/Nue.png">
     </div>
   </div>
 
@@ -565,11 +619,11 @@
   <!-- Seção 14 -->
   <div class="container">
     <div class="texto">
-      <h1>ELEFANTE ABUNDATE</h1>
+      <h1>BANSHO</h1>
       <p>
         Um shikigami elefante que pode produzir um enorme volume de água de sua tromba e esmagar inimigos com seu peso. O Max Elephant de Sukuna possui órbitas oculares afundadas e presas longas e curvas.Ao usar a habilidade de produzir água de Max Elephant sem invocá-la diretamente, Sukuna pode imitar o Sangue Perfurante disparando um raio de água de suas mãos.  </div>
     <div class="imagem">
-      <img src="IMG/Saturo/pumple.png">
+      <img src="IMG/Sukuna/Habilidades/elefante abundante.png">
     </div>
   </div>
 
@@ -580,7 +634,7 @@
       <p>
         Um shikigami veado que Sukuna dominou após possuir Megumi. Ele pode executar a técnica de reversão de maldições e liberar energia positiva para curar outras pessoas ou neutralizar energias amaldiçoadas.  </div>
     <div class="imagem">
-      <img src="IMG/Saturo/pumple.png">
+      <img src="IMG/Sukuna/Habilidades/rena circular.png">
     </div>
   </div>
 
@@ -591,7 +645,7 @@
       <p>
         Um shikigami touro que Sukuna dominou após possuir Megumi.Causa dano investindo e colidindo com os inimigos. Embora só possa se mover em linha reta, quanto mais longe viaja, mais forte atinge.  </div>
     <div class="imagem">
-      <img src="IMG/Saturo/pumple.png">
+      <img src="IMG/Sukuna/Habilidades/touro perdurante.png">
     </div>
   </div>
   
@@ -602,9 +656,19 @@
     <p>
       Um shikigami de fusão que combina Nue com Grande Serpente, Veado Redondo e Funeral de Tigre. O shikigami humanoide resultante é tão alto quanto Mahoraga, pode produzir eletricidade de seus punhos, e se regenerar ou curar outros com a técnica de maldição reversa.  </div>
   <div class="imagem">
-    <img src="IMG/Saturo/pumple.png">
+    <img src="IMG/Sukuna/Habilidades/Besta Quimera.avif">
   </div>
 </div>
+
+<div style="position: relative; width: 100vw; height: 70vh; overflow: hidden;">
+  <video src="Vid/Expd - Sukuna.mp4" autoplay muted loop 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+  </video>
+  <h1 style="position: absolute; top: 20px; left: 110px; color: #FFD700; font-size: 32px; font-family: Arial, sans-serif; text-shadow: 2px 2px 5px #000;">
+    GENERAL IMORAL DA ESPADA DE OITO CABOS MAHORAGA
+  </h1>
+</div>
+
 
 
  <!-- Seção 14 -->
@@ -614,9 +678,16 @@
     <p>
       A expansão do domínio de Sukuna cria um santuário budista decorado com caveiras. Tudo dentro do domínio é implacavelmente cortado com Desmantelar ou Cleave, dependendo do seu nível de energia amaldiçoada. O Santuário Malévolo tem uma característica única: não cria um espaço separado ao ser cercado por uma barreira, mas sim se manifesta no espaço aéreo circundante. Ao permitir uma rota de fuga, um voto de vinculação é formado, o que aumenta enormemente a área efetiva do acerto garantido, com um raio máximo de quase 200 metros.</div>
   <div class="imagem">
-    <img src="IMG/Saturo/pumple.png">
+    <img src="IMG/Sukuna/Habilidades/EXPD.png">
   </div>
 </div>
 
+<section id="videos">
+<h2 class="video-title">Vídeos</h2>
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/-NUztsKYItE" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/VmWiomO3sgE?si=88eFFs1HYwM7HoAo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/mLJ3FNZdcHs?si=TPuD-r3mYCa54kBZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 </body>
 </html>
+</section>
